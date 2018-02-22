@@ -1,0 +1,43 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>เมนู</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+
+
+       <ion-list *ngIf="!isLogin">
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+          <ion-icon name="{{p.xxx}}"></ion-icon>
+        {{p.title}}
+      </button>
+    </ion-list>
+
+       <ion-list *ngIf="isLogin">
+
+<ion-item>
+            <ion-avatar item-left>
+                <img src="assets/img/head.png">
+            </ion-avatar>
+            <h3>สวัสดี คุณ {{fnameuser}} {{lnameuser}}</h3>
+            <p>กำลังอยู่ในระบบ</p>
+      </ion-item>
+
+      <button menuClose ion-item *ngFor="let p of loginPages" (click)="openPage(p)">
+          <h6><ion-icon  color="primary" name="{{p.xxx}}">
+        {{p.title}} </ion-icon></h6>
+      </button>
+
+      
+    </ion-list>
+
+
+
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>ข้อมูลประจำตัว</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<!--
+<ion-content padding>
+
+  <ion-list-header *ngFor ="let h of personalservice"  >
+      
+    <h3>{{ h.pname}} {{ h.fname }} {{ h.lname }}</h3>
+    <h3>บัตรประชาชน : {{ h.cid}}  </h3>
+    <h3>HN : {{ h.hn }}  </h3>
+  
+  </ion-list-header>
+
+</ion-content>
+-->
+
+
+<ion-content class="list-avatar-page">
+  
+  <ion-list>
+
+
+
+
+    <ion-list-header style="background-color:lightgray"     >
+        <h3  >{{ pname}} {{ fname }} {{ lname }}</h3>
+        <h3>บัตรประชาชน : {{ cid}}  </h3>
+        <h3>HN : {{ hn }}  </h3>
+    </ion-list-header>
+
+
+ <ion-list-header > <button ion-button color="secondary" small outline><h6>การตรวจรักษา</h6></button>
+    </ion-list-header>
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="assets/img/lab1.png">
+      </ion-avatar>
+      <h2>LAB ORDER</h2>
+      <p>ประวัติการตรวจผล LAB</p>
+      
+      
+       <button ion-button clear item-right   (click)="lab1(h)">View</button>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="assets/img/medical1.png">
+      </ion-avatar>
+      <h2>MEDICAL ORDER</h2>
+      <p>ประวัติการได้รับยา</p>
+      
+      <button ion-button clear item-right  (click)="med1(h)">View</button>
+    </ion-item>
+ 
+
+  <ion-list-header ><button ion-button color="secondary" small outline><h6>กิจกรรมกับโรงพยาบาล</h6></button>
+    </ion-list-header>
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="assets/img/member.png">
+      </ion-avatar>
+      <h2>Service Schedule</h2>
+      <p>ตารางเวลาการตรวจรักษา</p>
+      
+      
+       <button ion-button clear item-right (click)="cServiceS()" >View</button>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="assets/img/promotion.png">
+      </ion-avatar>
+      <h2>Promotion</h2>
+      <p>โปรโมชั่น ด้านสุขภาพ</p>
+      
+      <button ion-button clear item-right (click)="cPromotion()" >View</button>
+    </ion-item>
+
+
+  </ion-list>
+
+</ion-content>
+       
+    
+    
+      
+     
+  
+  
+
+

@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-navbar color="primary">
+     <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>เกี่ยวกับ</ion-title>
+
+ 
+
+
+  </ion-navbar>
+  
+
+
+    
+</ion-header>
+
+
+
+
+<ion-content >
+
+<ion-list>
+
+
+  
+  <ion-slides pager [autoplay]="3000" [loop]="true">
+      <ion-slide *ngFor="let slide of slides">
+        <img [src]="slide.image" class="slide-image"/>
+        <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+        <p [innerHTML]="slide.description"></p>
+      </ion-slide>
+    </ion-slides> 
+
+ 
+
+
+
+
+
+
+<ion-card>
+
+<ion-item>
+    <ion-avatar item-left>
+      <img src="assets/img/natch160.jpg">
+    </ion-avatar>
+    <h3>Suteemon Maneechvang</h3>
+    <p>Natch Application Brand</p>
+  </ion-item>
+
+  <img src="assets/img/bgaboutapp.jpg">
+
+  <ion-card-content>
+    <p>หมากรุกยังต้องคิด หมากชีวิตไม่คิดได้อย่างไร.</p>
+  </ion-card-content>
+
+  <ion-row>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div> like </div>
+      </button>
+    </ion-col>
+
+
+
+    <ion-col>
+      <button ion-button icon-left clear small (click)="openContact()">
+        <ion-icon name="text"></ion-icon>
+        <div>contact</div>
+      </button>
+    </ion-col>
+  
+
+
+  </ion-row>
+
+</ion-card>
+
+</ion-list>
+
+
+</ion-content>

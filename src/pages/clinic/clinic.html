@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>คลีนิกแพทย์</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding >
+
+<ion-list-header style="background-color:lightgray">
+        <h3> กรุณากรอกข้อมูล (เฉพาะแพทย์เท่านั้น) </h3>
+       
+    </ion-list-header>
+
+
+<form novalidate [formGroup]="myForm" (ngSubmit)="loginpersonal()">
+  <ion-list>
+  <ion-item>
+    <ion-label floating>รหัสผู้ใช้</ion-label>
+    <ion-input type="text" formControlName="loginname" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>รหัสผ่าน</ion-label>
+    <ion-input type="password" formControlName="pass"></ion-input>
+  </ion-item>
+
+
+
+</ion-list>
+
+<button ion-button block type="submit"  color="primary" >เข้าสู่ระบบ</button>
+
+</form>
+
+<button ion-button block color="danger" clear>{{ jan }}  </button>
+
+</ion-content>
+
+
+
+

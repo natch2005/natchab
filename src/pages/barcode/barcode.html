@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar color="primary">
+     <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Barcode Scaner</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+<br><br>
+  <button ion-button full (click)="scan()">สแกน บาร์โค้ดที่นี่</button>
+
+  <br><br>
+  {{ data }}<br>
+   {{ barcodeFormat }}
+
+</ion-content>

@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>ข้อมูล MEDICAL ORDER</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content class="list-avatar-page">
+  
+  <ion-list>
+
+
+   <ion-list-header style="background-color:lightgray">
+        <h3> {{ pname }} {{ fname }} {{ lname }} </h3>
+        <h3>บัตรประชาชน : {{ cid }}  </h3>
+        <h3>HN : {{ hn }} </h3>
+    </ion-list-header>
+
+
+
+ <button ion-button color="secondary" small outline ><h6>วันที่รับยา</h6></button>
+
+
+
+
+ <ion-item *ngFor ="let h of meddateservice">
+      <ion-icon name="ios-archive-outline" item-left></ion-icon>
+      <h5>{{ h.vstdate }} เวลา : {{ h.rxtime }}</h5>
+      <h5><p>{{h.hpi}}</p></h5>
+             <button ion-button clear item-right (click)="mdedetail(h)" > view </button>
+    </ion-item>
+
+
+
+
+  </ion-list>
+
+</ion-content>

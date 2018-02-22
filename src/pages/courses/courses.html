@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="primary">
+     <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>คอร์สเรียน</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+<ion-list>
+    <button ion-item *ngFor ="let c of courses">
+      <h3>{{ c.c_title }}</h3>
+      <p>{{ c.c_detail }}</p>
+    </button>
+</ion-list>
+
+
+</ion-content>

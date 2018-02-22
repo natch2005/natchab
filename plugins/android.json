@@ -1,0 +1,51 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "natch.natchab_2.hos"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "natch.natchab_2.hos"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "natch.natchab_2.hos"
+        },
+        "cordova-plugin-googlemaps": {
+            "API_KEY_FOR_ANDROID": "AIzaSyCufGSADM8vov0P8awwCexmcrGhHa8m_I0",
+            "PACKAGE_NAME": "natch.natchab_2.hos"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "natch.natchab_2.hos"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "natch.natchab_2.hos"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "natch.natchab_2.hos"
+        },
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "natch.natchab_2.hos"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "natch.natchab_2.hos"
+        },
+        "phonegap-plugin-barcodescanner": {
+            "PACKAGE_NAME": "natch.natchab_2.hos"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "164350051419",
+            "PACKAGE_NAME": "natch.natchab_2.hos"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "natch.natchab_2.hos"
+        }
+    }
+}

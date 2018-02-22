@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Natch Application Bard</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <ion-list>
+
+  <ion-list-header>
+    <button ion-button color="colorbaanit"   ><h2>ตำแหน่งของอาการ</h2></button>
+  </ion-list-header>
+
+ 
+
+
+      <ion-list-header (click)="top1()">
+       <ion-avatar item-left>
+      <img src="assets/img/head.png">
+       </ion-avatar>
+    <h1>HEAD</h1>
+     <p>ส่วนหัว</p>
+        <ion-icon item-right name="md-arrow-dropright"></ion-icon>
+      </ion-list-header>
+ 
+
+   
+      <ion-list-header (click)="top2()">
+       <ion-avatar item-left>
+      <img src="assets/img/body.png">
+       </ion-avatar>
+        <h1>BODY</h1>
+        <p>ส่วนลำตัว</p>
+          <ion-icon item-right name="md-arrow-dropright"></ion-icon>
+      </ion-list-header>
+    
+
+
+       
+      <ion-list-header (click)="top3()">
+       <ion-avatar item-left>
+      <img src="assets/img/leg.png">
+       </ion-avatar>
+        <h1>LOWER BODY</h1>
+        <p>ส่วนลำตัวส่วนล่าง</p>
+          <ion-icon item-right name="md-arrow-dropright"></ion-icon>
+      </ion-list-header>
+   
+
+       
+      <ion-list-header (click)="top4()">
+       <ion-avatar item-left>
+      <img src="assets/img/herb.png">
+       </ion-avatar>
+        <h1>MEDICAL HERB</h1>
+        <p>ยาสมุนไพร</p>
+          <ion-icon item-right name="md-arrow-dropright"></ion-icon>
+      </ion-list-header>
+   
+
+       
+      <ion-list-header (click)="top5()">
+       <ion-avatar item-left>
+      <img src="assets/img/firstaid.png">
+       </ion-avatar>
+        <h1>FIRST AID</h1>
+        <p>ปฐมพยาบาล</p>
+          <ion-icon item-right name="md-arrow-dropright"></ion-icon>
+      </ion-list-header>
+   
+
+ 
+
+</ion-list>
+
+
+</ion-content>

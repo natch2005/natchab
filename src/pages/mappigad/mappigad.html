@@ -1,0 +1,51 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+      <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>บันทึกพิกัดบ้านของฉัน</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding >
+
+  
+<div #map id="map" style="height:300px;">
+</div>
+
+
+<ion-list *ngIf="!showpigadnull">
+<ion-item>
+  <h5>*</h5>
+<h5> {{janpigad}} </h5>
+</ion-item>
+</ion-list>
+
+  <ion-list>
+  <ion-item-sliding *ngIf="!showpigad">
+    <ion-item>
+        <h5>*</h5>
+        <h5>บ้านคุณ : {{fnameuser}} {{lnameuser}}</h5>
+        <h5>พิกัด : {{ lat }} , {{ lng }}</h5>
+        <h5>วันที่บันทึก : {{ datesave }} </h5>
+    </ion-item>
+       <ion-item-options side="right">
+      <button ion-button large color="danger" (click)="delpigad()" >
+        <ion-icon name="ios-trash"></ion-icon>
+        ลบ
+      </button>
+    </ion-item-options>
+  </ion-item-sliding>
+</ion-list>
+
+  <button ion-button color="danger" (click)="getMyLocation()" >บันทึกพิกัดบ้านของฉัน</button>
+
+
+
+
+     
+
+</ion-content>

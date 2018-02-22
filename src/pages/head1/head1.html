@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title> {{nameid}} </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+<ion-list-header *ngFor ="let h of chomeservice" (click)="head1detail(h)" >
+       <ion-avatar item-left>
+      <img src="assets/img/{{ h.htp_img }}">
+       </ion-avatar>
+    <h3>{{ h.titleT2 }}</h3>
+   
+     
+        <ion-icon item-right name="md-arrow-dropright"></ion-icon>
+      </ion-list-header>
+
+
+   
+
+
+<!--
+<ion-card ion-list *ngFor ="let h of chomeservice" >
+<ion-list >
+  <ion-item>
+    <ion-avatar item-left>
+      <img src="assets/img/head.png">
+    </ion-avatar>
+    <h3>{{ h.titleT2 }}</h3>
+</ion-item>
+       <p>{{ h.detail_p2 }}</p>
+       </ion-list>
+   </ion-card>
+-->
+
+
+
+
+
+</ion-content>

@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>เชื่อมโยงโรงพยาบาล</ion-title>
+  </ion-navbar>
+  <ion-list-header style="background-color:lightgray"     >
+        <h3  >{{ pname}} {{ fname }} {{ lname }}</h3>
+        <h3>บัตรประชาชน : {{ cid}}  </h3>
+        <h3>HN : {{ hn }}  </h3>
+      </ion-list-header>
+</ion-header>
+
+
+
+
+<ion-content padding>
+
+ <ion-list>
+  <ion-item >
+    <ion-thumbnail item-start item-left>
+      <img src="assets/img/joinpersonal.png">
+    </ion-thumbnail>
+    <h3>--></h3>
+    <h3>ผลการตรวจรักษา</h3>
+    <p>เลือดและการรับยา</p>
+    <button ion-button clear item-end item-right (click)="joinpersonal()" >View</button>
+  </ion-item>
+
+  <ion-item >
+    <ion-thumbnail item-start item-left>
+      <img src="assets/img/joinappoint.png">
+    </ion-thumbnail>
+    <h3>--></h3>
+    <h3>วันที่นัด</h3>
+    <p>วันที่นัดและการเรียกคิว</p>
+    <button ion-button clear item-end item-right (click)="joinappoint()" >View</button>
+  </ion-item>
+
+    <ion-item >
+    <ion-thumbnail item-start item-left>
+      <img src="assets/img/joinambulang.png">
+    </ion-thumbnail>
+    <h3>--></h3>
+    <h3>เรียกรถมูลนิธิ</h3>
+    <p>ส่งข้อมูลเข้ากลุ่มมูลนิธิ</p>
+    <button ion-button clear item-end item-right (click)="joinambulance()" >View</button>
+  </ion-item>
+
+    <ion-item >
+    <ion-thumbnail item-start item-left>
+      <img src="assets/img/joingps.png">
+    </ion-thumbnail>
+    <h3>--></h3>
+    <h3>บันทึกพิกัดบ้าน</h3>
+    <p>บันทึกพิกัดบ้านของตัวท่านเอง</p>
+    <button ion-button clear item-end item-right (click)="joinpigad()" >View</button>
+  </ion-item>
+
+</ion-list>
+
+
+
+</ion-content>

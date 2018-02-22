@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>การนัด/เรียกคิว</ion-title>
+  </ion-navbar>
+  <ion-list-header style="background-color:lightgray"     >
+        <h3  >{{ pname}} {{ fname }} {{ lname }}</h3>
+        <h3>บัตรประชาชน : {{ cid}}  </h3>
+        <h3>HN : {{ hn }}  </h3>
+      </ion-list-header>
+</ion-header>
+
+
+
+
+<ion-content padding>
+
+
+
+<ion-card *ngFor ="let h of dateappoint">
+  <ion-card-content >
+  <ion-item  >
+       <h2>  วันนัดครั้งต่อไป <br> วันที่ : {{ h.nextdate | date: "dd/MM/yyyy" }} <br> เวลานัด :  {{ h.nexttime }} </h2>
+            <button ion-button color="colorbaanit" icon-left (click)="showdatelon();"  ><ion-icon name="md-desktop" ></ion-icon>เลื่อนนัด</button>
+     <button ion-button color="colorbaanit" icon-left (click)="callIT('tel:073517529')"  ><ion-icon name="ios-call" ></ion-icon>เลื่อนนัด</button>
+  </ion-item>
+
+
+<ion-item *ngIf="showdatelons">
+        <ion-label>วันที่เลื่อน</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" min="{{dateConfig.min}}" max="{{dateConfig.max}}" [(ngModel)]="mydate" (ionChange)="datecalen(mydate)" ></ion-datetime>
+        <h5> the date is : 555555</h5>
+</ion-item>
+
+
+
+     </ion-card-content>
+</ion-card>
+
+<ion-card *ngIf="jandate" >
+  <ion-card-content >
+     <div text-center >
+       <h6 color="danger" >การนัด</h6><br>
+    <h6 color="danger" >ไม่มีการนัดจากทางโรงพยาบาล</h6>
+    </div>
+  </ion-card-content>
+</ion-card>
+
+<ion-card *ngFor ="let a of queuerub">
+  <ion-card-content >
+  
+    <div text-center >
+        <button ion-button color="secondary" full    ><h1>  ลำดับคิวรับยา  </h1></button>
+        <h1 color="secondary" > {{ a.rx_queue }} </h1> 
+    </div>
+    
+    <div text-center *ngFor ="let b of queuerai">
+          <button ion-button color="danger" full   ><h1>  คิวที่กำลังเรียก </h1></button>
+          <h1 color="danger" > {{ b.rx_rai }} </h1> 
+         <!--
+            <button ion-button color="colnew1" full  (click)="reloadq();" icon-left ><ion-icon name="md-refresh"></ion-icon><h1>  Reload  </h1></button>
+            -->
+    </div>
+
+  
+  </ion-card-content>
+</ion-card>
+
+<ion-card *ngIf="jan" >
+  <ion-card-content >
+     <div text-center >
+       <h6 color="danger" >การแสดงคิว</h6><br>
+    <h6 color="danger" >การแสดงคิวจะแสดงเมื่อได้รับใบสั่งยา</h6>
+    </div>
+  </ion-card-content>
+</ion-card>
+
+
+
+
+
+
+
+</ion-content>

@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>เชื่อมโยงโรงพยาบาล</ion-title>
+  </ion-navbar>
+  <ion-list-header style="background-color:lightgray"     >
+        <h3  >{{ pname}} {{ fname }} {{ lname }}</h3>
+        <h3>บัตรประชาชน : {{ cid}}  </h3>
+        <h3>HN : {{ hn }}  </h3>
+      </ion-list-header>
+</ion-header>
+
+
+<ion-content padding>
+ 
+    <ion-list *ngIf ="!imageData">
+        <ion-item>
+          <ion-label>ถ่ายรูปเหตุการณ์ ที่เกิดขึ้นขณะนี้ <br>  เพื่อเรียกรถ Ambulance </ion-label>
+           
+        </ion-item>
+    </ion-list>
+ 
+
+
+    <ion-card>
+    <img [src]="_sanitizer.bypassSecurityTrustUrl(imageData)" *ngIf ="imageData">
+    <!--
+      <ion-card-content>
+          <ion-card-title>
+              <div *ngIf="useURI">
+                File URI is {{ imageData }}
+              </div>
+              <div *ngIf="!useURI">
+                File Base64 image has {{ (imageData + '').length }} bytes
+              </div>
+          </ion-card-title>
+      </ion-card-content>
+      -->
+    </ion-card>
+
+    <!-- <ion-item *ngIf ="imageData"> -->
+      <ion-item *ngIf ="imageData" >
+        <h5>พิกัดที่อยู่ขณะนี้ </h5>
+        <h5>latitude : {{ pigadlat }} </h5>
+        <h5>longitude : {{ pigadlng }}</h5>
+        <h5>วันที่[เวลา] : {{ todayDate | date: "dd/MM/yyyy [HH:mm]" }} </h5>
+    </ion-item>
+
+
+    <button ion-button color="primary" (click)="takePicture(1)">ถ่ายรูป!!</button>
+    <button ion-button color="danger" (click)="takePicture(0)">แสดง Album</button>
+   <!-- <button ion-button color="danger" (click)="getMyLocation()">ดึง พิกัด555</button> -->
+    <!--  <button ion-button color="danger" (click)="testcamera()">ทดสอบกล้อง</button> -->
+    <button ion-button color="colorbaanit" (click)="upload()" *ngIf ="imageData">ส่งข้อมูลแจ้ง  ==> โรงพยาบาล</button>
+
+</ion-content>

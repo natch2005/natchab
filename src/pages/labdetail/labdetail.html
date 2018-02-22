@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>ข้อมูล LAB ORDER</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="list-avatar-page">
+  
+  
+  <ion-list>
+
+
+
+
+    <ion-list-header style="background-color:lightgray">
+        <h3> {{ pname }} {{ fname }} {{ lname }} </h3>
+        <h3>บัตรประชาชน : {{ cid }}  </h3>
+        <h3>HN : {{ hn }} </h3>
+    </ion-list-header>
+
+
+
+
+
+
+    <ion-item>
+      <ion-icon name="list" item-left></ion-icon>
+      <h5>Total-Cholesterol</h5>
+      <h5><p>ระดับไขมันในเลือด</p></h5>
+             <button ion-button clear item-right (click)="labdetail1(369,'Total-Cholesterol')">View</button>
+    </ion-item>
+
+     <ion-item>
+      <ion-icon name="list" item-left></ion-icon>
+      <h5>LDL-Cholesterol</h5>
+      <h5><p>ระดับไขมันไม่ดีในเลือด</p></h5>
+            <button ion-button clear item-right (click)="labdetail1(372,'LDL-Cholesterol')">View</button>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="list" item-left></ion-icon>
+      <h5>Blood Sugar</h5>
+      <h5><p>ระดับน้ำตาลในเลือด</p></h5>
+            <button ion-button clear item-right (click)="labdetail1(365,'Blood Sugar')">View</button>
+    </ion-item>
+
+      <ion-item>
+     <ion-icon name="list" item-left></ion-icon>
+      <h5>GFR </h5>
+     <h5> <p>อัตราการทำงานของไต</p></h5>
+            <button ion-button clear item-right (click)="labdetail1(768,'GFR')">View</button>
+    </ion-item>
+
+     <ion-item>
+      <ion-icon name="list" item-left></ion-icon>
+      <h5>SGOT(AST)</h5>
+      <h5><p>ค่าการทำงานของตับ</p></h5>
+            <button ion-button clear item-right (click)="labdetail1(378,'SGOT(AST)')">View</button>
+    </ion-item>
+
+     <ion-item>
+      <ion-icon name="list" item-left></ion-icon>
+      <h5>SGPT(ALT)</h5>
+      <h5><p>ค่าการทำงานของตับ</p></h5>
+            <button ion-button clear item-right (click)="labdetail1(379,'SGPT(ALT)')">View</button>
+    </ion-item>
+
+     
+
+
+  </ion-list>
+  
+ <ion-list>
+
+  
+
+
+  </ion-list>
+
+</ion-content>

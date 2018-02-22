@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>ข้อมูลประจำตัว</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding >
+
+<ion-list-header style="background-color:lightgray">
+        <h3> กรุณากรอกข้อมูล </h3>
+       
+    </ion-list-header>
+
+
+<form novalidate [formGroup]="myForm" (ngSubmit)="loginpersonal()">
+  <ion-list>
+  <ion-item>
+    <ion-label floating>รหัสบัตรประชาชน</ion-label>
+    <ion-input type="tel" formControlName="cid"  ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>หมายเลข HN</ion-label>
+    <ion-input type="tel" formControlName="hn" ></ion-input>
+  </ion-item>
+
+
+
+
+</ion-list>
+
+<button ion-button block type="submit"  color="primary" >เข้าสู่ระบบ</button>
+
+</form>
+
+<button ion-button block color="danger" clear>{{ jan }} {{cidst}} {{pnamest}} {{fnamest}} {{lnamest}} </button>
+
+
+</ion-content>
+
+
+
+

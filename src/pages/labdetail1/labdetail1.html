@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>ข้อมูล LAB ORDER</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content class="list-avatar-page">
+  
+  <ion-list>
+
+
+   <ion-list-header style="background-color:lightgray">
+        <h3> {{ pname }} {{ fname }} {{ lname }} </h3>
+        <h3>บัตรประชาชน : {{ cid }}  </h3>
+        <h3>HN : {{ hn }} </h3>
+    </ion-list-header>
+
+
+
+
+ <button ion-button color="secondary" small outline ><h6>{{ nameicode }}</h6></button>
+
+
+
+
+ <ion-item *ngFor ="let h of labdetailservice">
+      <ion-icon name="ios-flask-outline" item-left></ion-icon>
+      <h5>{{ h.report_date }}</h5>
+      <h5><p>Nomal : {{ h.lab_items_normal_value_ref }}</p></h5>
+             <button ion-button clear item-right >{{h.lab_order_result}}</button>
+    </ion-item>
+
+
+
+
+  </ion-list>
+
+</ion-content>

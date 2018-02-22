@@ -1,0 +1,68 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+     
+    <ion-title>ติดต่อเรา</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-label color="primary"><h5>Natch Application Brand</h5></ion-label>
+  
+
+  <form novalidate [formGroup]="myForm" (ngSubmit)="signup()">
+  <ion-list>
+  <ion-item>
+    <ion-label color="primary">ชื่อ</ion-label>
+    <ion-input  formControlName="fullname" placeholder="ชื่อ-นามสกุล"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary">โทรศัพท์</ion-label>
+    <ion-input formControlName="phone" type="tel" placeholder="เบอร์โทรศัพท์"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" stacked>E-mail</ion-label>
+    <ion-input formControlName="email" type="email" placeholder="Email Input"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" >ข้อความ</ion-label>
+    <ion-textarea formControlName="detailcon" placeholder="Enter a description"></ion-textarea>
+  </ion-item>
+
+ <button ion-button block type="submit" [disabled]="!myForm.valid" color="primary" >Sent Messages</button>
+
+</ion-list>
+</form>
+
+<!--
+<form novalidate [formGroup]="myForm" (ngSubmit)="signup()">
+  <ion-list>
+
+  <ion-item>
+    <ion-label floating>ชื่อ-สกุล</ion-label>
+    <ion-input formControlName="fullname" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Email</ion-label>
+    <ion-input formControlName="email" type="email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Password</ion-label>
+    <ion-input formControlName="password" type="password"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <button ion-button block large type="submit" [disabled]="!myForm.valid" >สร้างบัญชีใหม่</button>  
+  </ion-item>
+
+</ion-list> 
+</form>
+ -->
+
+
+</ion-content>
